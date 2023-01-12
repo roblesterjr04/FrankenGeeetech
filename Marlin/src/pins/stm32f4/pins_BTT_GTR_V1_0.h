@@ -33,7 +33,7 @@
 
 #define USES_DIAG_JUMPERS
 #define HAS_OTG_USB_HOST_SUPPORT                  // USB Flash Drive support
-#define M5_EXTENDER                               // The M5 extender is attached
+//#define M5_EXTENDER                               // The M5 extender is attached
 
 // Onboard I2C EEPROM
 #define I2C_EEPROM
@@ -62,6 +62,9 @@
 #define E0_DIAG_PIN                         PG14  // X+
 #define E1_DIAG_PIN                         PG9   // Y+
 #define E2_DIAG_PIN                         PD3   // Z+
+
+#define FIL_RUNOUT_PIN PG14
+#define FIL_RUNOUT2_PIN PG9
 
 //
 // Limit Switches
@@ -282,7 +285,8 @@
 //
 #define TEMP_0_PIN                          PC1   // T1 <-> E0
 #define TEMP_1_PIN                          PC2   // T2 <-> E1
-#define TEMP_2_PIN                          PC3   // T3 <-> E2
+//#define TEMP_2_PIN                          PC3   // T3 <-> E2
+#define TEMP_CHAMBER_PIN                    PC3
 
 #if ENABLED(M5_EXTENDER)
   #define TEMP_3_PIN                        PA3   // M5 TEMP1
@@ -313,7 +317,7 @@
 //
 #define HEATER_0_PIN                        PB1   // Heater0
 #define HEATER_1_PIN                        PA1   // Heater1
-#define HEATER_2_PIN                        PB0   // Heater2
+//#define HEATER_2_PIN                        PB0   // Heater2
 
 #if ENABLED(M5_EXTENDER)
   #define HEATER_3_PIN                      PD15  // M5 HEAT1
@@ -328,6 +332,7 @@
 #define FAN_PIN                             PE5   // Fan0
 #define FAN1_PIN                            PE6   // Fan1
 #define FAN2_PIN                            PC8   // Fan2
+#define FAN3_PIN                            PB0   // M5 FAN1
 
 #if ENABLED(M5_EXTENDER)
   #define FAN3_PIN                          PI5   // M5 FAN1
